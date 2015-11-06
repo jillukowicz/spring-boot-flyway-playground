@@ -1,11 +1,20 @@
 package com.jillukowicz.spring.boot.flyway;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
 /**
  * @author jillukowicz
  */
+@Entity
 public class Person
 {
 
+  @Id
+  @GeneratedValue
+  private Long id;
   private String firstName;
   private String lastName;
 
